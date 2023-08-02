@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "image-recognition"
+version = "0.1.0"
+description = ""
+authors = ["Yasunori Ishiguro <ishiguro-y@dainichi-consul.co.jp>"]
+readme = "README.md"
+packages = [{ include = "image_recognition" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+torch = "^2.0.1"
+pillow = "^10.0.0"
+numpy = "^1.25.2"
+flake8 = "6.0.0"
+black = "^23.7.0"
+pyproject-flake8 = "^6.0.0.post1"
+isort = "^5.12.0"
+mypy = "^1.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+per-file-ignores = ["__init__.py:F401"]
+max-line-length = 88
+extend-exclude = ["resources"]
+
+[tool.black]
+line-length = 88
+extend-exclude = """
+(
+    .git
+    | .mypy_cache
+    | .venv
+    | resources
+)
+"""
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
+extend_skip_glob = ["**/resources/*"]
+
+[tool.mypy]
+python_version = "3.11"
+no_strict_optional = true
+ignore_missing_imports = true
+check_untyped_defs = true
+exclude = ['^resources$', '^.venv$']
