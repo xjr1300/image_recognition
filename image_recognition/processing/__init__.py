@@ -43,8 +43,8 @@ def convolution(image: Image.Image, kernel: np.ndarray, x: int, y: int) -> float
     return value
 
 
-def apply_filter(image: Image, kernel: np.ndarray) -> Image:
-    """画像にフィルタを適用する。
+def apply_convolution(image: Image, kernel: np.ndarray) -> Image:
+    """画像を畳み込み演算する。
 
     Args:
         image (Image): フィルタを適用する画像

@@ -25,7 +25,7 @@ def gaussian_kernel(width: int, height: int, sigma: float) -> np.ndarray:
     return kernel
 
 
-def edge_kernel():
+def edge_kernels():
     """エッジを検出するカーネルを生成する。
 
     Returns:
