@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["cmap", "figsize", "imshow"]
+  "cSpell.words": [
+    "cmap",
+    "figsize",
+    "getpixel",
+    "imshow",
+    "ndarray",
+    "putpixel",
+    "scipy"
+  ]
 }
