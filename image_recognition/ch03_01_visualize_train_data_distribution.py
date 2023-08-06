@@ -6,13 +6,11 @@ from matplotlib import pyplot as plt
 from PIL import Image
 from sklearn.manifold import TSNE
 
-from image_recognition import resource_dir
+from image_recognition import cifar_dir
 
 # CIFAR-10のデータセットをダウンロード
 # データセットがダウンロード済みの場合は、ダウンロードをスキップ
-cifar_dir = os.path.join(resource_dir(), "cifar10")
-os.makedirs(cifar_dir, exist_ok=True)
-dataset = torchvision.datasets.CIFAR10(root=cifar_dir, train=True, download=True)
+dataset = torchvision.datasets.CIFAR10(root=cifar_dir(), train=True, download=True)
 
 # それぞれの物体クラスのすべてのラベルの画像を１枚ずつ表示するまでループ
 plt.figure(num="CIFAR-10", figsize=(10, 10))

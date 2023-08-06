@@ -26,3 +26,14 @@ def image_resource_dir() -> str:
         str: イメージリソースディレクトリのパス。
     """
     return os.path.join(resource_dir(), "images")
+
+
+def cifar_dir() -> str:
+    """CIFAR-10データセットのディレクトリを返す。
+
+    Returns:
+        str: CIFAR-10データセットのディレクトリのパス。
+    """
+    path = os.path.join(resource_dir(), "cifar10")
+    os.makedirs(path, exist_ok=True)
+    return path

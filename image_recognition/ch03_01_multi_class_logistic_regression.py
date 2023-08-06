@@ -12,11 +12,7 @@ from torch.utils.data import DataLoader, Dataset
 from torch.utils.data.sampler import SubsetRandomSampler
 from tqdm import tqdm
 
-from image_recognition import resource_dir
-
-
-def cifar_dir() -> str:
-    return os.path.join(resource_dir(), "cifar10")
+from image_recognition import cifar_dir
 
 
 def generate_subset_indices_pair(
@@ -189,7 +185,7 @@ def evaluate_train_dataset():
     # 入力データ正規化のために学習セットのデータを使って
     # 各次元の平均と標準偏差を計算
     dataset = torchvision.datasets.CIFAR10(
-        root="data", train=True, download=True, transform=transform
+        root=cifar_dir(), train=True, download=True, transform=transform
     )
     channel_mean, channel_std = calculate_dataset_statistics(dataset)
 
@@ -201,7 +197,7 @@ def evaluate_train_dataset():
 
     # 学習、評価セットの用意
     train_dataset = torchvision.datasets.CIFAR10(
-        root="data",
+        root=cifar_dir(),
         train=True,
         download=True,
         # transform=img_transform,
@@ -209,7 +205,7 @@ def evaluate_train_dataset():
         target_transform=target_transform,
     )
     test_dataset = torchvision.datasets.CIFAR10(
-        root="data",
+        root=cifar_dir(),
         train=False,
         download=True,
         # transform=img_transform,
