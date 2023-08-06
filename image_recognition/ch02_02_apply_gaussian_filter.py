@@ -2,8 +2,8 @@ import os
 
 import cv2
 import numpy as np
-from PIL import Image
 from matplotlib import pyplot as plt
+from PIL import Image
 
 from image_recognition import image_resource_dir
 from image_recognition.filters import gaussian_kernel

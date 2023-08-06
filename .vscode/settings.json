@@ -1,12 +1,20 @@
 {
   "cSpell.words": [
+    "amax",
     "astype",
     "cmap",
+    "dtype",
     "figsize",
+    "fromarray",
+    "getbands",
     "getpixel",
     "imshow",
+    "ksize",
     "ndarray",
+    "pbar",
     "putpixel",
-    "scipy"
+    "scipy",
+    "torchvision",
+    "tqdm"
   ]
 }

@@ -1,9 +1,9 @@
 import os
 
-from PIL import Image
-import numpy as np
-from scipy import signal
 import matplotlib.pyplot as plt
+import numpy as np
+from PIL import Image
+from scipy import signal
 
 from image_recognition import image_resource_dir
 from image_recognition.filters import edge_kernels
