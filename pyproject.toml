@@ -2,7 +2,7 @@
 name = "image-recognition"
 version = "0.1.0"
 description = ""
-authors = ["Yasunori Ishiguro <ishiguro-y@dainichi-consul.co.jp>"]
+authors = ["Yasunori Ishiguro <xjr1300.04@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "image_recognition" }]
 
