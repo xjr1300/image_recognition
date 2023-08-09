@@ -37,3 +37,14 @@ def cifar_dir() -> str:
     path = os.path.join(resource_dir(), "cifar10")
     os.makedirs(path, exist_ok=True)
     return path
+
+
+def params_dir() -> str:
+    """モデルのパラメーターを格納するディレクトリを返す。
+
+    Returns:
+        str: モデルのパラメーターを格納するディレクトリのパス。
+    """
+    path = os.path.join(resource_dir(), "params")
+    os.makedirs(path, exist_ok=True)
+    return path
