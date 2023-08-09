@@ -76,17 +76,19 @@ def calculate_dataset_statistics_by_channels(
         Tuple[torch.Tensor, torch.Tensor]: データセット全体のチャネル別の平均と標準偏差
     """
     data = [dataset[i][0] for i in range(len(dataset))]
+    """
     print(f"len(data): {len(data)}")  # 50,000
     print(
         f"data[0].shape: {data[0].shape}"
     )  # torch.Size([3, 32, 32]) - 3チャネル、32x32ピクセル画像
+    """
     data = torch.stack(data)
-    print(f"data.shape: {data.shape}")  # torch.Size([50000, 3, 32, 32])
+    # print(f"data.shape: {data.shape}")  # torch.Size([50000, 3, 32, 32])
     # 各チャネルの平均値と標準偏差を計算
     channel_mean = data.mean(dim=(0, 2, 3))
-    print(f"channel_mean.shape: {channel_mean.shape}")  # torch.Size([3])   - 3チャンネルの平均値
+    # print(f"channel_mean.shape: {channel_mean.shape}")  # torch.Size([3])   - 3チャンネルの平均値
     channel_std = data.std(dim=(0, 2, 3))  # torch.Size([3])   - 3チャンネルの標準偏差
-    print(f"channel_std.shape: {channel_std.shape}")
+    # print(f"channel_std.shape: {channel_std.shape}")
     return channel_mean, channel_std
 
 
