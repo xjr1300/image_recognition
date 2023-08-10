@@ -1,3 +1,2 @@
 __pycache__/
-data/
-image_recognition/resources/cifar10/
+image_recognition/*
