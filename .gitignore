@@ -1,2 +1,3 @@
 __pycache__/
-image_recognition/*
+image_recognition/
+.venv/
